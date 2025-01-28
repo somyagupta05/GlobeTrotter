@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toor Website</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- flatpicker -->
+    <!-- Flatpickr CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+      rel="stylesheet"
+    />
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Font Awesome CDN -->
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="font-sans bg-white m-0 p-0 overflow-x-hidden">
+    <!-- Top Navbar -->
+    <!-- left icons -->
+    <div
+      class="bg-sky-500 text-white py-2 relative transition-colors duration-300"
+    >
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <!-- Social Links -->
+        <div class="relative flex space-x-4">
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <!-- Menu Bar Icon -->
+        <div class="md:hidden">
+          <button id="menuToggle" class="hover:text-gray-300">
+            <i id="menuIcon" class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Right Links -->
+        <div
+          id="menuLinks"
+          class="hidden flex-col space-y-2 text-sm mt-2 bg-sky-500 text-white rounded-md shadow-lg p-4 md:flex md:flex-row md:space-x-4 md:space-y-0 md:mt-0 md:bg-transparent md:text-white md:shadow-none md:p-0"
+        >
+          <a href="page3\index.html" class="hover:text-blue-700">Login</a>
+          <a href="page4\index.html" class="hover:text-blue-700">Signup</a>
+          <a href="page5\index.html" class="hover:text-blue-700">USD</a>
+        </div>
+      </div>
+
+      <!-- Main Navbar -->
+      <div class="bg-transparent absolute left-0 w-full z-50">
+        <div
+          class="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4"
+        >
+          <!-- Logo -->
+          <div class="text-2xl font-bold text-white">TOOR</div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-6">
+            <!-- Home -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Home
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Submenu 1</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Submenu 2</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Submenu 3</a
+                >
+              </div>
+            </div>
+
+            <!-- Hotels -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Hotels
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Hotels List</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Popular Destinations</a
+                >
+              </div>
+            </div>
+
+            <!-- Flights -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Flights
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Flight Search</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Booking Status</a
+                >
+              </div>
+            </div>
+            <!-- cruise -->
+
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Cruise
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Cruise Packages</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Luxury Cruises</a
+                >
+              </div>
+            </div>
+            <!-- Cars -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Cars
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Car Rentals</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Self-Drive Options</a
+                >
+              </div>
+            </div>
+
+            <!-- Blog -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Blog
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Latest Articles</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Travel Guides</a
+                >
+              </div>
+            </div>
+
+            <!-- Pages -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-blue-300 text-white flex items-center"
+              >
+                Pages
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >About Us</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Contact</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >FAQ</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Add other desktop links with dropdowns as needed -->
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+          class="fixed bottom-0 left-0 w-full bg-sky-400 text-white md:hidden flex justify-around items-center py-2"
+        >
+          <!-- Home -->
+          <a href="#" class="flex flex-col items-center hover:text-blue-300">
+            <i class="fas fa-home text-lg"></i>
+            <span class="text-xs">Home</span>
+          </a>
+
+          <!-- Hotels -->
+          <a
+            href="#recommended-hotels"
+            class="flex flex-col items-center hover:text-blue-300"
+          >
+            <i class="fas fa-bed text-lg"></i>
+            <span class="text-xs">Hotels</span>
+          </a>
+
+          <!-- Flights -->
+          <a
+            href="#recommended-Flight"
+            class="flex flex-col items-center hover:text-blue-300"
+          >
+            <i class="fas fa-plane text-lg"></i>
+            <span class="text-xs">Flights</span>
+          </a>
+
+          <!-- Blog -->
+          <a
+            href="#recommended-Cruise"
+            class="flex flex-col items-center hover:text-blue-300"
+          >
+            <i class="fas fa-ship mr-2 text-white"></i>
+            <span class="text-xs">Cruise</span>
+          </a>
+
+          <!-- Pages -->
+          <a
+            href="#recommended-Cars"
+            class="flex flex-col items-center hover:text-blue-300"
+          >
+            <i class="fa-solid fa-car"></i>
+            <span class="text-xs">cars</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="Homebg.webp"
+          alt="Background"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 container mx-auto text-white py-20 sm:py-40 text-center px-4"
+      >
+        <h1 class="text-3xl xs:text-8xl sm:text-4xl md:text-5xl font-bold">
+          Upto 25% off on first booking<br />
+          <span class="text-sky-500">Car</span> through your app!
+        </h1>
+
+        <!-- Features Section -->
+        <div
+          class="flex flex-wrap justify-center mt-4 space-y-3 text-sm sm:flex-nowrap sm:justify-between sm:space-y-0 sm:space-x-6"
+        >
+          <span class="flex items-center">
+            <i class="fas fa-dollar-sign mr-2 text-sky-500"></i>Best Price
+            Guaranteed
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-car mr-2 text-sky-500"></i>Home Pickups
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-desktop mr-2 text-sky-500"></i>Easy Bookings
+          </span>
+          <span class="flex items-center">
+            <i class="fas fa-headphones-alt mr-2 text-sky-500"></i>24/7 Customer
+            Care
+          </span>
+        </div>
+
+        <!-- Enquiry Button -->
+        <a href="page2\index.html" class="mt-6 inline-block">
+          <button
+            class="mt-6 px-6 py-3 bg-sky-500 hover:bg-blue-500 text-white rounded-[30px]"
+          >
+            ENQUIRY NOW
+          </button>
+        </a>
+        <!-- Navigation Section -->
+        <div
+        class="absolute lg:w-[70%] bottom-0 left-0 right-0 px-4 sm:justify-start sm:ml-20 nav-links"
+      >
+        <div
+          class="w-full bg-sky-500 p-2 rounded-lg flex flex-wrap justify-center sm:w-[80%] mx-auto md:w-[60%] lg:w-[50%] nav-links"
+        >
+          <a
+            href="#"
+            onclick="showForm('hotel', this)"
+            class="nav-link px-3 py-2 text-white hover:bg-blue-600 flex items-center text-sm"
+          >
+            <i class="fas fa-building mr-2 text-black"></i> Hotel
+          </a>
+          <a
+            href="#"
+            onclick="showForm('flights', this)"
+            class="nav-link px-3 py-2 bg-white text-black hover:bg-gray-100 flex items-center text-sm"
+          >
+            <i class="fas fa-plane mr-2 text-black"></i> Flights
+          </a>
+          <a
+            href="#"
+            onclick="showForm('cruise', this)"
+            class="nav-link px-3 py-2 bg-white text-black hover:bg-gray-100 flex items-center text-sm"
+          >
+            <i class="fas fa-ship mr-2 text-black"></i> Cruise
+          </a>
+          <a
+            href="#"
+            onclick="showForm('car', this)"
+            class="nav-link px-3 py-2 bg-white text-black hover:bg-gray-100 flex items-center text-sm"
+          >
+            <i class="fas fa-car mr-2 text-black"></i> Car
+          </a>
+        </div>
+      </div>
+           
+      </div></div>
+      
+      <!-- Input Section -->
+      <div id="forms-container" class="bg-sky-500 py-4 px-4">
+        <!-- Hotel Form -->
+        <div id="hotel-form" class="form-content">
+          <div class="mt-4 flex flex-wrap justify-center gap-3 md:flex-nowrap lg:ml-80 w-full md:w-[80%] lg:w-[60%]">
+            <!-- Location and Hotel Name -->
+            <input
+              type="text"
+              id="location-input"
+              placeholder="Your Destination and Hotel Name"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+        
+            <!-- Rooms & Guests Dropdown -->
+            <div class="relative w-full md:flex-1">
+              <input
+                type="text"
+                placeholder="Rooms & Guests                          >"
+                class="px-4 py-2 rounded bg-white w-full placeholder-black cursor-pointer"
+                onclick="toggleDropdown()"
+                readonly
+                id="rooms-guests-input"
+              />
+              <div id="dropdown-menu" class="absolute bg-white w-full rounded shadow-lg hidden">
+                <div class="px-4 py-2">
+                  <label class="block text-sm text-gray-700">Rooms</label>
+                  <select class="w-full px-2 py-1 border rounded text-sm" id="rooms-select">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
+                  </select>
+                </div>
+                <div class="px-4 py-2">
+                  <label class="block text-sm text-gray-700">Guests</label>
+                  <select class="w-full px-2 py-1 border rounded text-sm" id="guests-select">
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                  </select>
+                </div>
+                <div class="px-4 py-2 text-right">
+                  <button class="px-4 py-1 bg-blue-500 text-white rounded" onclick="applyDropdownValues()">
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Date Picker -->
+            <div class="relative w-full md:flex-1">
+              <input
+                type="date"
+                id="check-in-date"
+                class="px-4 py-2 rounded bg-white w-full pl-10 placeholder-black date-picker"
+                placeholder="Check-in Date"
+              />
+            </div>
+            <div class="relative w-full md:flex-1">
+              <input
+                type="date"
+                id="check-out-date"
+                class="px-4 py-2 rounded bg-white w-full pl-10 placeholder-black date-picker"
+                placeholder="Check-out Date"
+              />
+            </div>
+        
+            <!-- Search Button -->
+            <button
+              class="px-6 py-2 bg-black text-white rounded w-full md:w-auto"
+              onclick="searchHotels()"
+            >
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        </div>
+        
+        <div id="hotel-results" class="mt-6"></div>
+        
+    
+        <!-- Flights Form -->
+        <div id="flights-form" class="bg-sky-500 form-content hidden py-4">
+          <div
+            class="bg-sky-500 flex flex-wrap justify-center gap-3 md:flex-nowrap lg:ml-80 w-full md:w-[80%] lg:w-[60%]"
+          >
+            <input
+              type="text"
+              placeholder="Departure City"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+            <input
+              type="text"
+              placeholder="Destination City"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+            <div class="relative w-full md:flex-1">
+              
+              <input
+                type="date"
+                class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black date-picker"
+                placeholder="   Date of Travel"
+              />
+            </div>
+            <button
+              class="px-6 py-2 bg-black text-white rounded w-full md:w-auto"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cruise Form -->
+        <div id="cruise-form" class="bg-sky-500 form-content hidden py-4">
+          <div
+            class="bg-sky-500  flex flex-wrap justify-center gap-3 md:flex-nowrap lg:ml-80 w-full md:w-[80%] lg:w-[60%]"
+          >
+            <input
+              type="text"
+              placeholder="Departure Port"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+            <input
+              type="text"
+              placeholder="Destination Port"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+            <div class="relative w-full md:flex-1">
+              
+              <input
+                type="date"
+                class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black date-picker"
+                placeholder="    cruise Travel"
+              />
+            </div>
+            <button
+              class="px-6 py-2 bg-black text-white rounded w-full md:w-auto"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Car Form -->
+        <div id="car-form" class="bg-sky-500 form-content  hidden py-4">
+          <div
+            class="bg-sky-500 flex flex-wrap justify-center gap-3 md:flex-nowrap lg:ml-80 w-full md:w-[80%] lg:w-[60%]"
+          >
+            <input
+              type="text"
+              placeholder="Pick-up Location"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+            <input
+              type="text"
+              placeholder="Drop-off Location"
+              class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black"
+            />
+            <div class="relative w-full md:flex-1">
+              
+              <input
+                type="date"
+                class="px-4 py-2 rounded bg-white w-full md:flex-1 placeholder-black date-picker"
+                placeholder="     pick-up-date  Drop-of-date"
+              />
+            </div>
+            <button
+              class="px-6 py-2 bg-black text-white rounded w-full md:w-auto"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <script>
+        function toggleDropdown() {
+          const dropdown = document.getElementById("dropdown-menu");
+          dropdown.classList.toggle("hidden");
+        }
+        
+        function applyDropdownValues() {
+          const rooms = document.getElementById("rooms-select").value;
+          const guests = document.getElementById("guests-select").value;
+          const inputField = document.getElementById("rooms-guests-input");
+          inputField.value = `${rooms} Room(s), ${guests} Guest(s)`;
+        
+          // Hide dropdown after applying
+          toggleDropdown();
+        }
+
+        const links = document.querySelectorAll(".nav-link");
+        links.forEach((link) => link.classList.remove("active"));
+        element.classList.add("active");
+
+        document.addEventListener("DOMContentLoaded", function () {
+          flatpickr(".date-picker", {
+            mode: "range", // For date ranges (optional, remove for single date)
+            altInput: true, // Show formatted date
+            altFormat: "F j, Y", // Format displayed to the user
+            dateFormat: "Y-m-d", // Format for form submissions
+          });
+        });
+
+        function showForm(formType) {
+          const forms = document.querySelectorAll(".form-content");
+          forms.forEach((form) => form.classList.add("hidden"));
+          document
+            .getElementById(`${formType}-form`)
+            .classList.remove("hidden");
+        }
+      </script>
+
+      <!-- CSS for Hidden Class -->
+      
+
+      <!-- page 2 -->
+      <div id="recommended-hotels" class="bg-white w-full">
+        <div class="w-full mx-auto p-4 md:p-8 lg:p-16">
+          <!-- Heading and Arrows -->
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0"
+          >
+            <h1 class="text-2xl md:text-3xl font-bold text-center md:text-left">
+              Recommended Hotels
+            </h1>
+            <div class="flex space-x-2">
+              <button class="p-2 bg-gray-300 rounded-md hover:bg-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="p-2 bg-sky-500 text-white rounded-md hover:bg-blue-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hotel Cards -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4"
+          >
+            <!-- Card 1 -->
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden group relative"
+            >
+              <!-- Image -->
+              <div class="relative h-[200px]">
+                <img
+                  src="Beach11.webp"
+                  alt="Hotel Image 1"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-100 absolute"
+                />
+                <img
+                  src="beach12.webp"
+                  alt="Hotel Image 2"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <img
+                  src="Beach14.webp"
+                  alt="Hotel Image 3"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+
+                <!-- Rating -->
+                <div
+                  class="absolute bottom-4 right-2 bg-transparent px-2 py-1 rounded-full shadow flex items-center space-x-1 text-white text-sm"
+                >
+                  <span><i class="fas fa-star"></i></span>
+                  <span>4.5</span>
+                </div>
+
+                <!-- Dot Slider -->
+                <div
+                  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                >
+                  <div
+                    class="dot w-2 h-2 bg-white rounded-full cursor-pointer"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="2"
+                  ></div>
+                </div>
+              </div>
+              <!-- Content -->
+              <div class="p-4">
+                <h3 class="font-medium text-lg">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <p class="font-semibold">$150 night</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden group relative"
+            >
+              <!-- Image -->
+              <div class="relative h-[200px]">
+                <img
+                  src="beach12.webp"
+                  alt="Hotel Image 1"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-100 absolute"
+                />
+                <img
+                  src="Beach14.webp"
+                  alt="Hotel Image 2"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <img
+                  src="Beach11.webp"
+                  alt="Hotel Image 3"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+
+                <!-- Rating -->
+                <div
+                  class="absolute bottom-4 right-2 bg-transparent px-2 py-1 rounded-full shadow flex items-center space-x-1 text-white text-sm"
+                >
+                  <span><i class="fas fa-star"></i></span>
+                  <span>4.5</span>
+                </div>
+
+                <!-- Dot Slider -->
+                <div
+                  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                >
+                  <div
+                    class="dot w-2 h-2 bg-white rounded-full cursor-pointer"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="2"
+                  ></div>
+                </div>
+              </div>
+              <!-- Content -->
+              <div class="p-4">
+                <h3 class="font-medium text-lg">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">Spain</p>
+                <p class="font-semibold">$180 night</p>
+              </div>
+            </div>
+
+            <!-- Repeat Card 3 and Card 4 similarly as above -->
+            <!-- Card 3 -->
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden group relative"
+            >
+              <div class="relative h-[200px]">
+                <img
+                  src="beach12.webp"
+                  alt="Hotel Image 1"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-100 absolute"
+                />
+                <img
+                  src="Beach11.webp"
+                  alt="Hotel Image 2"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <img
+                  src="Beach14.webp"
+                  alt="Hotel Image 3"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div
+                  class="absolute bottom-4 right-2 bg-gray-800 px-2 py-1 rounded-full shadow flex items-center space-x-1 text-white text-sm"
+                >
+                  <span><i class="fas fa-star"></i></span><span>4.3</span>
+                </div>
+                <div
+                  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                >
+                  <div
+                    class="dot w-2 h-2 bg-white rounded-full cursor-pointer"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="2"
+                  ></div>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-medium text-lg">Ibiza</h3>
+                <p class="text-gray-500 text-sm">Spain</p>
+                <p class="font-semibold">$200 night</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden group relative"
+            >
+              <div class="relative h-[200px]">
+                <img
+                  src="Beach14.webp"
+                  alt="Hotel Image 1"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-100 absolute"
+                />
+                <img
+                  src="beach12.webp"
+                  alt="Hotel Image 2"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <img
+                  src="Beach11.webp"
+                  alt="Hotel Image 3"
+                  class="slider-image w-full h-full object-cover rounded-[5%] opacity-0 absolute"
+                />
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div
+                  class="absolute bottom-4 right-2 bg-gray-800 px-2 py-1 rounded-full shadow flex items-center space-x-1 text-white text-sm"
+                >
+                  <span><i class="fas fa-star"></i></span><span>4.8</span>
+                </div>
+                <div
+                  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                >
+                  <div
+                    class="dot w-2 h-2 bg-white rounded-full cursor-pointer"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="dot w-2 h-2 bg-gray-300 rounded-full cursor-pointer"
+                    data-slide="2"
+                  ></div>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-medium text-lg">Maldives</h3>
+                <p class="text-gray-500 text-sm">Indian Ocean</p>
+                <p class="font-semibold">$350 night</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 3 -->
+      <div class="flex p-6 md:p-16 justify-center bg-white about-section">
+        <!-- Background Container -->
+        <div
+          class="relative bg-sky-500 rounded-[40px] p-4 md:p-8 h-200 w-full flex flex-col md:flex-row items-center md:items-start md:space-x-8"
+        >
+          <!-- Image 1 -->
+          <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+            <img
+              src="Rect1.webp"
+              alt="Traveler 1"
+              class="w-full h-96 rounded-lg object-cover"
+            />
+          </div>
+
+          <!-- Image 2 -->
+          <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mt-4 md:mt-0">
+            <img
+              src="Rect2.webp"
+              alt="Traveler 2"
+              class="w-full h-96 rounded-lg"
+            />
+          </div>
+
+          <!-- About Us Content -->
+          <div
+            class="flex flex-col justify-start w-full mt-6 md:mt-0 md:w-1/3 text-white"
+          >
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">About Us</h2>
+            <p class="text-sm md:text-base mb-4">
+              Li Europan lingues es membres del sam familie. Lor separat
+              existeinte es un myth. Por scientie, musica, sport etc, litot
+              Europa usa li sam vocabular.
+            </p>
+            <p class="text-sm md:text-base mb-6">
+              Li Europan lingues es membres del sam familie. Lor separat
+              existeinte es un myth. Por scientie, musica, sport etc, litot
+              Europa usa li sam vocabular.
+            </p>
+
+            <!-- List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle"></i>
+                <span>Personalized Service</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle"></i>
+                <span>Best Price</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle"></i>
+                <span>24x7 Support</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle"></i>
+                <span>Trusted Company</span>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <a href="page6\index.html" class="mt-6 inline-block">
+              <button
+                class="px-4 py-2 bg-white text-sky-500 rounded-full font-semibold hover:bg-gray-100 w-36"
+              >
+                Explore Now
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 4 -->
+      <div class="bg-white py-2 p-6 md:p-16 -mt-2">
+        <!-- Heading Section with Navigation Arrows -->
+        <div class="flex items-center justify-between mb-6 px-4 sm:px-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-left">Our Work</h2>
+          <div class="flex space-x-2">
+            <button class="p-2 bg-gray-200 hover:bg-gray-300">
+              <svg
+                class="w-4 h-4 text-gray-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button class="p-2 bg-sky-500 hover:bg-blue-600">
+              <svg
+                class="w-4 h-4 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-6"
+        >
+          <!-- Card 1 -->
+          <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <!-- Image -->
+            <img
+              src="work1.webp"
+              alt="Book Flights"
+              class="w-full h-64 sm:h-80 object-cover"
+            />
+            <!-- Linear Gradient -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-cyan-600 via-cyan-400 to-transparent opacity-0 group-hover:opacity-80 sm:group-hover:opacity-80 md:group-hover:opacity-80 lg:group-hover:opacity-80 transition-opacity duration-300"
+            ></div>
+            <!-- Text -->
+            <div
+              class="absolute bottom-4 left-4 text-white z-10 opacity-0 group-hover:opacity-100 sm:group-hover:opacity-100 md:group-hover:opacity-100 lg:group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h3 class="text-lg font-bold">Book Flights</h3>
+              <p class="text-sm">1250 Offers</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <!-- Image -->
+            <img
+              src="work2.webp"
+              alt="Book Cruises"
+              class="w-full h-64 sm:h-80 object-cover"
+            />
+            <!-- Linear Gradient -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-cyan-600 via-cyan-400 to-transparent opacity-0 group-hover:opacity-80 sm:group-hover:opacity-80 md:group-hover:opacity-80 lg:group-hover:opacity-80 transition-opacity duration-300"
+            ></div>
+            <!-- Text -->
+            <div
+              class="absolute bottom-4 left-4 text-white z-10 opacity-0 group-hover:opacity-100 sm:group-hover:opacity-100 md:group-hover:opacity-100 lg:group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h3 class="text-lg font-bold">Book Cruises</h3>
+              <p class="text-sm">1250 Locations</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <!-- Image -->
+            <img
+              src="work3.webp"
+              alt="Book Hotels"
+              class="w-full h-64 sm:h-80 object-cover"
+            />
+            <!-- Linear Gradient -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-cyan-600 via-cyan-400 to-transparent opacity-0 group-hover:opacity-80 sm:group-hover:opacity-80 md:group-hover:opacity-80 lg:group-hover:opacity-80 transition-opacity duration-300"
+            ></div>
+            <!-- Text -->
+            <div
+              class="absolute bottom-4 left-4 text-white z-10 opacity-0 group-hover:opacity-100 sm:group-hover:opacity-100 md:group-hover:opacity-100 lg:group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h3 class="text-lg font-bold">Book Hotels</h3>
+              <p class="text-sm">1250 Locations</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <!-- Image -->
+            <img
+              src="work4.webp"
+              alt="Book Tours"
+              class="w-full h-64 sm:h-80 object-cover"
+            />
+            <!-- Linear Gradient -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-cyan-600 via-cyan-400 to-transparent opacity-0 group-hover:opacity-80 sm:group-hover:opacity-80 md:group-hover:opacity-80 lg:group-hover:opacity-80 transition-opacity duration-300"
+            ></div>
+            <!-- Text -->
+            <div
+              class="absolute bottom-4 left-4 text-white z-10 opacity-0 group-hover:opacity-100 sm:group-hover:opacity-100 md:group-hover:opacity-100 lg:group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h3 class="text-lg font-bold">Book Tours</h3>
+              <p class="text-sm">1550 Locations</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- page 5 -->
+        <div id="recommended-Flight" class="bg-white py-2 p-6 md:p-16 -mt-2">
+          <!-- Heading Section with Navigation Arrows -->
+          <div class="flex items-center justify-between mb-6 px-4 sm:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-left">
+              Recommended Flight
+            </h2>
+            <div class="flex space-x-2">
+              <button class="p-2 bg-gray-200 hover:bg-gray-300">
+                <svg
+                  class="w-4 h-4 text-gray-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button class="p-2 bg-sky-500 hover:bg-blue-600">
+                <svg
+                  class="w-4 h-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Flight Cards -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="flight1.webp"
+                alt="Flight Image"
+                class="w-full h-48 sm:h-56 md:h-64 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="flight2.webp"
+                alt="Flight Image"
+                class="w-full h-48 sm:h-56 md:h-64 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="flight3.webp"
+                alt="Flight Image"
+                class="w-full h-48 sm:h-56 md:h-64 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="flight4.webp"
+                alt="Flight Image"
+                class="w-full h-48 sm:h-56 md:h-64 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 6 -->
+      <div id="recommended-Cruise" class="bg-gray-200 mt-20 w-full">
+        <div class="w-full p-6 md:p-16 lg:p-32">
+          <!-- Heading -->
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0"
+          >
+            <h1
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-left"
+            >
+              Recommended Cruise
+            </h1>
+            <div class="flex space-x-2">
+              <button class="p-2 bg-gray-300 rounded-md hover:bg-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="p-2 bg-sky-500 text-white rounded-md hover:bg-blue-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <!-- Example Card (Repeat for other cards) -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="cruise1.webp"
+                alt="Cruise 1"
+                class="w-full h-48 sm:h-56 object-cover"
+              />
+              <div class="p-4 sm:p-6">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-base sm:text-lg">
+                    Marine Corp
+                  </h3>
+                  <div class="flex items-center space-x-1 mt-2">
+                    <span class="text-black">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.03 3.15a1 1 0 00.95.69h3.316c.969 0 1.371 1.24.588 1.81l-2.686 1.95a1 1 0 00-.364 1.118l1.03 3.15c.3.921-.755 1.688-1.54 1.118l-2.686-1.95a1 1 0 00-1.176 0l-2.686 1.95c-.784.57-1.838-.197-1.54-1.118l1.03-3.15a1 1 0 00-.364-1.118L2.75 8.577c-.783-.57-.38-1.81.588-1.81h3.316a1 1 0 00.95-.69l1.03-3.15z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="text-gray-600 font-medium">4.8</p>
+                  </div>
+                </div>
+                <p class="text-gray-500 text-sm">3 Days 4 Nights</p>
+                <hr class="my-3" />
+                <div class="flex items-center justify-between text-sm">
+                  <div>
+                    <p class="text-black">Date</p>
+                    <p class="font-medium">Jan 26, 2022</p>
+                  </div>
+                  <div>
+                    <p class="text-black">Departure</p>
+                    <p class="font-medium">Los Vegas</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center bg-sky-500 rounded-lg justify-between mt-4 p-2"
+                >
+                  <p class="text-lg font-semibold text-white">$150</p>
+                  <button
+                    class="bg-white text-sky-500 py-2 px-4 rounded-md hover:bg-blue-600 text-sm border-2 border-white"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End of Card -->
+            <!-- card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="cruise2.webp"
+                alt="Cruise 1"
+                class="w-full h-48 sm:h-56 object-cover"
+              />
+              <div class="p-4 sm:p-6">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-base sm:text-lg">
+                    Marine Corp
+                  </h3>
+                  <div class="flex items-center space-x-1 mt-2">
+                    <span class="text-black">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.03 3.15a1 1 0 00.95.69h3.316c.969 0 1.371 1.24.588 1.81l-2.686 1.95a1 1 0 00-.364 1.118l1.03 3.15c.3.921-.755 1.688-1.54 1.118l-2.686-1.95a1 1 0 00-1.176 0l-2.686 1.95c-.784.57-1.838-.197-1.54-1.118l1.03-3.15a1 1 0 00-.364-1.118L2.75 8.577c-.783-.57-.38-1.81.588-1.81h3.316a1 1 0 00.95-.69l1.03-3.15z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="text-gray-600 font-medium">4.8</p>
+                  </div>
+                </div>
+                <p class="text-gray-500 text-sm">3 Days 4 Nights</p>
+                <hr class="my-3" />
+                <div class="flex items-center justify-between text-sm">
+                  <div>
+                    <p class="text-black">Date</p>
+                    <p class="font-medium">Jan 26, 2022</p>
+                  </div>
+                  <div>
+                    <p class="text-black">Departure</p>
+                    <p class="font-medium">Los Vegas</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center bg-sky-500 rounded-lg justify-between mt-4 p-2"
+                >
+                  <p class="text-lg font-semibold text-white">$150</p>
+                  <button
+                    class="bg-white text-sky-500 py-2 px-4 rounded-md hover:bg-blue-600 text-sm border-2 border-white"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="cruise3.webp"
+                alt="Cruise 1"
+                class="w-full h-48 sm:h-56 object-cover"
+              />
+              <div class="p-4 sm:p-6">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-base sm:text-lg">
+                    Marine Corp
+                  </h3>
+                  <div class="flex items-center space-x-1 mt-2">
+                    <span class="text-black">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.03 3.15a1 1 0 00.95.69h3.316c.969 0 1.371 1.24.588 1.81l-2.686 1.95a1 1 0 00-.364 1.118l1.03 3.15c.3.921-.755 1.688-1.54 1.118l-2.686-1.95a1 1 0 00-1.176 0l-2.686 1.95c-.784.57-1.838-.197-1.54-1.118l1.03-3.15a1 1 0 00-.364-1.118L2.75 8.577c-.783-.57-.38-1.81.588-1.81h3.316a1 1 0 00.95-.69l1.03-3.15z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="text-gray-600 font-medium">4.8</p>
+                  </div>
+                </div>
+                <p class="text-gray-500 text-sm">3 Days 4 Nights</p>
+                <hr class="my-3" />
+                <div class="flex items-center justify-between text-sm">
+                  <div>
+                    <p class="text-black">Date</p>
+                    <p class="font-medium">Jan 26, 2022</p>
+                  </div>
+                  <div>
+                    <p class="text-black">Departure</p>
+                    <p class="font-medium">Los Vegas</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center bg-sky-500 rounded-lg justify-between mt-4 p-2"
+                >
+                  <p class="text-lg font-semibold text-white">$150</p>
+                  <button
+                    class="bg-white text-sky-500 py-2 px-4 rounded-md hover:bg-blue-600 text-sm border-2 border-white"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="cruise4.webp"
+                alt="Cruise 1"
+                class="w-full h-48 sm:h-56 object-cover"
+              />
+              <div class="p-4 sm:p-6">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-base sm:text-lg">
+                    Marine Corp
+                  </h3>
+                  <div class="flex items-center space-x-1 mt-2">
+                    <span class="text-black">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.03 3.15a1 1 0 00.95.69h3.316c.969 0 1.371 1.24.588 1.81l-2.686 1.95a1 1 0 00-.364 1.118l1.03 3.15c.3.921-.755 1.688-1.54 1.118l-2.686-1.95a1 1 0 00-1.176 0l-2.686 1.95c-.784.57-1.838-.197-1.54-1.118l1.03-3.15a1 1 0 00-.364-1.118L2.75 8.577c-.783-.57-.38-1.81.588-1.81h3.316a1 1 0 00.95-.69l1.03-3.15z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="text-gray-600 font-medium">4.8</p>
+                  </div>
+                </div>
+                <p class="text-gray-500 text-sm">3 Days 4 Nights</p>
+                <hr class="my-3" />
+                <div class="flex items-center justify-between text-sm">
+                  <div>
+                    <p class="text-black">Date</p>
+                    <p class="font-medium">Jan 26, 2022</p>
+                  </div>
+                  <div>
+                    <p class="text-black">Departure</p>
+                    <p class="font-medium">Los Vegas</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center bg-sky-500 rounded-lg justify-between mt-4 p-2"
+                >
+                  <p class="text-lg font-semibold text-white">$150</p>
+                  <button
+                    class="bg-white text-sky-500 py-2 px-4 rounded-md hover:bg-blue-600 text-sm border-2 border-white"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 7 -->
+      <div id="recommended-Cars" class="bg-white p-8 md:p-16 lg:p-32">
+        <div class="w-full mx-auto">
+          <!-- Heading and Arrows -->
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mb-8"
+          >
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-0">
+              Recommended Cars
+            </h1>
+            <div class="space-x-2 flex">
+              <button class="p-2 bg-gray-300 rounded-md hover:bg-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="p-2 bg-sky-500 text-white rounded-md hover:bg-blue-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+          >
+            <!-- Card Template -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="car1.webp"
+                alt="Car Image"
+                class="w-full h-40 md:h-48 lg:h-58 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium text-base md:text-lg">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between mt-3">
+                  <p class="font-semibold text-sm md:text-base">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 text-sm md:text-base rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicate cards for other items -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="car2.webp"
+                alt="Car Image"
+                class="w-full h-40 md:h-48 lg:h-58 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium text-base md:text-lg">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between mt-3">
+                  <p class="font-semibold text-sm md:text-base">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 text-sm md:text-base rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Additional cards go here -->
+            <!-- card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="car3.webp"
+                alt="Car Image"
+                class="w-full h-40 md:h-48 lg:h-58 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium text-base md:text-lg">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between mt-3">
+                  <p class="font-semibold text-sm md:text-base">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 text-sm md:text-base rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="car4.webp"
+                alt="Car Image"
+                class="w-full h-40 md:h-48 lg:h-58 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="font-medium text-base md:text-lg">Gran Canaria</h3>
+                <p class="text-gray-500 text-sm">France</p>
+                <div class="flex items-center justify-between mt-3">
+                  <p class="font-semibold text-sm md:text-base">$150 night</p>
+                  <button
+                    class="bg-sky-500 text-white py-2 px-4 text-sm md:text-base rounded-full hover:bg-blue-600"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- page 8 -->
+
+      <div
+        class="max-w-7xl mx-auto py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+      >
+        <!-- Heading -->
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center mb-8"
+        >
+          <h1 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">
+            Our Blogs And Articles
+          </h1>
+          <div class="space-x-2 flex">
+            <button class="p-2 bg-gray-300 rounded-md hover:bg-gray-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="p-2 bg-sky-500 text-white rounded-md hover:bg-blue-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Blog Section -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8"
+        >
+          <!-- Blog Item 1 -->
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <img
+              class="w-full sm:w-48 h-48 rounded-lg object-cover"
+              src="Blog1.webp"
+              alt="Blog Image"
+            />
+            <div>
+              <h3 class="text-sm text-gray-600 font-semibold">Lorem Ipsum</h3>
+              <h2 class="text-base sm:text-lg font-bold text-gray-800">
+                Lorem Ipsum is simply<br />
+                dummy text.
+              </h2>
+              <p class="text-sm text-gray-600 mt-2">
+                Lorem Ipsum is simply dummy text of<br />
+                the printing and typesetting industry.
+              </p>
+              <a
+                href="#"
+                class="text-sky-500 text-sm mt-2 inline-flex items-center font-semibold hover:underline"
+              >
+                Read More <span class="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Item 2 -->
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <img
+              class="w-full sm:w-48 h-48 rounded-lg object-cover"
+              src="blog2.webp"
+              alt="Blog Image"
+            />
+            <div>
+              <h3 class="text-sm text-gray-600 font-semibold">Lorem Ipsum</h3>
+              <h2 class="text-base sm:text-lg font-bold text-gray-800">
+                Lorem Ipsum is simply<br />
+                dummy text.
+              </h2>
+              <p class="text-sm text-gray-600 mt-2">
+                Lorem Ipsum is simply dummy text of<br />
+                the printing and typesetting industry.
+              </p>
+              <a
+                href="#"
+                class="text-sky-500 text-sm mt-2 inline-flex items-center font-semibold hover:underline"
+              >
+                Read More <span class="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Item 3 -->
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <img
+              class="w-full sm:w-48 h-48 rounded-lg object-cover"
+              src="blog3.webp"
+              alt="Blog Image"
+            />
+            <div>
+              <h3 class="text-sm text-gray-600 font-semibold">Lorem Ipsum</h3>
+              <h2 class="text-base sm:text-lg font-bold text-gray-800">
+                Lorem Ipsum is simply<br />
+                dummy text.
+              </h2>
+              <p class="text-sm text-gray-600 mt-2">
+                Lorem Ipsum is simply dummy text of<br />
+                the printing and typesetting industry.
+              </p>
+              <a
+                href="#"
+                class="text-sky-500 text-sm mt-2 inline-flex items-center font-semibold hover:underline"
+              >
+                Read More <span class="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Item 4 -->
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <img
+              class="w-full sm:w-48 h-48 rounded-lg object-cover"
+              src="blog4.webp"
+              alt="Blog Image"
+            />
+            <div>
+              <h3 class="text-sm text-gray-600 font-semibold">Lorem Ipsum</h3>
+              <h2 class="text-base sm:text-lg font-bold text-gray-800">
+                Lorem Ipsum is simply<br />
+                dummy text.
+              </h2>
+              <p class="text-sm text-gray-600 mt-2">
+                Lorem Ipsum is simply dummy text of<br />
+                the printing and typesetting industry.
+              </p>
+              <a
+                href="#"
+                class="text-sky-500 text-sm mt-2 inline-flex items-center font-semibold hover:underline"
+              >
+                Read More <span class="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 9 -->
+      <div class="bg-gray-100 w-full min-w-full">
+        <!-- First Section -->
+        <div
+          class="flex flex-col w-full md:flex-row items-center bg-gray-200 rounded-lg p-0"
+        >
+          <!-- Text Content -->
+          <div class="md:w-1/2 space-y-6 px-5">
+            <h2 class="text-2xl font-bold text-gray-700">Why Choose Toor</h2>
+            <!-- First Row -->
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:space-x-6"
+            >
+              <div>
+                <h3 class="font-semibold text-gray-700">
+                  Personalized Service
+                </h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-700">24x7 Support</h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+              </div>
+            </div>
+            <!-- Second Row -->
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:space-x-6"
+            >
+              <div>
+                <h3 class="font-semibold text-gray-700">Best Price</h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-700">Trusted Company</h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="md:w-1/2">
+            <img
+              src="toor.webp"
+              alt="Boat on a lake"
+              class="rounded-lg w-full h-auto md:h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- page 10 -->
+      <div class="mt-12 px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Header Section -->
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center mb-8"
+        >
+          <h1 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">
+            Our Agents
+          </h1>
+          <div class="space-x-2 flex">
+            <button class="p-2 bg-gray-300 rounded-md hover:bg-gray-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="p-2 bg-sky-500 text-white rounded-md hover:bg-blue-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Image Grid Section -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <!-- Image 1 with Icons -->
+          <div class="relative group">
+            <!-- Image -->
+            <img
+              src="per1.webp"
+              alt="Person 1"
+              class="rounded-xl w-full h-auto"
+            />
+            <!-- Social Icons -->
+            <div
+              class="absolute bottom-2 left-2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="relative group">
+            <!-- Image -->
+            <img
+              src="per2.webp"
+              alt="Person 1"
+              class="rounded-xl w-full h-auto"
+            />
+            <!-- Social Icons -->
+            <div
+              class="absolute bottom-2 left-2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="relative group">
+            <!-- Image -->
+            <img
+              src="per3.webp"
+              alt="Person 1"
+              class="rounded-xl w-full h-auto"
+            />
+            <!-- Social Icons -->
+            <div
+              class="absolute bottom-2 left-2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="relative group">
+            <!-- Image -->
+            <img
+              src="per4.webp"
+              alt="Person 1"
+              class="rounded-xl w-full h-auto"
+            />
+            <!-- Social Icons -->
+            <div
+              class="absolute bottom-2 left-2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white bg-sky-500 p-2 rounded shadow hover:bg-sky-600"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 11 -->
+      <section
+        class="relative bg-cover bg-center"
+        style="background-image: url('travellers.webp')"
+      >
+        <div
+          class="bg-black bg-opacity-40 absolute left-6 right-6 top-10 bottom-10 rounded-2xl"
+        ></div>
+        <div class="relative z-10 text-center text-white py-20">
+          <h2 class="text-3xl font-bold mb-6">What Travellers Say About Us</h2>
+          <div class="flex justify-center items-center space-x-[-10px]">
+            <div
+              id="circle1"
+              class="circle-image w-16 h-16 rounded-full overflow-hidden"
+            >
+              <img
+                src="cir1.webp"
+                alt="Traveller 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              id="circle2"
+              class="circle-image w-20 h-20 rounded-full overflow-hidden z-10"
+            >
+              <img
+                src="cir2.webp"
+                alt="Traveller 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              id="circle3"
+              class="circle-image w-16 h-16 rounded-full overflow-hidden"
+            >
+              <img
+                src="cir3.webp"
+                alt="Traveller 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <p class="text-sm mt-4 mx-auto max-w-lg leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nobis suscipit blanditiis.
+          </p>
+          <div class="mt-4">
+            <h4 class="font-semibold">SANDI SMITH</h4>
+            <p class="text-sm">Trip Travelers</p>
+            <div class="text-yellow-400 mt-2">⭐⭐⭐⭐⭐</div>
+            <div class="flex justify-center items-center space-x-2 mt-8">
+              <span
+                class="slider-dot w-2 h-2 bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer"
+                data-slide="1"
+              ></span>
+              <span
+                class="slider-dot w-2 h-2 bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer"
+                data-slide="2"
+              ></span>
+              <span
+                class="slider-dot w-2 h-2 bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer"
+                data-slide="3"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+      <!-- page 12 -->
+      <section class="py-12 bg-white">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold">
+            Our Partners
+          </h3>
+        </div>
+
+        <!-- Partner Logos -->
+        <div
+          class="flex flex-wrap justify-center items-center gap-6 px-4 sm:px-8"
+        >
+          <!-- Adjust Logo Size Responsively -->
+          <img
+            src="partner.webp"
+            alt="Partner 1"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+          <img
+            src="partner.webp"
+            alt="Partner 2"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+          <img
+            src="partner.webp"
+            alt="Partner 3"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+          <img
+            src="partner.webp"
+            alt="Partner 4"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+          <img
+            src="partner.webp"
+            alt="Partner 5"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+          <img
+            src="partner.webp"
+            alt="Partner 6"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+          <img
+            src="partner.webp"
+            alt="Partner 7"
+            class="h-16 sm:h-20 lg:h-24 shadow-md rounded-md"
+          />
+        </div>
+      </section>
+
+      <footer class="bg-gray-800 text-white py-10 w-full">
+        <div class="w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Us Section -->
+          <div>
+            <h3 class="text-xl font-bold mb-2">About Us</h3>
+            <hr class="border-t-2 border-white w-12 mb-4" />
+            <p class="text-sm mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <p class="text-sm mb-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry...
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-blue-500"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-white hover:text-blue-500"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white hover:text-blue-500"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="text-white hover:text-blue-500"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div>
+            <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+            <hr class="border-t-2 border-white w-12 mb-4" />
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-blue-500">-Home</a></li>
+              <li><a href="#" class="hover:text-blue-500">-Hotels</a></li>
+              <li><a href="#" class="hover:text-blue-500">-Flights</a></li>
+              <li><a href="#" class="hover:text-blue-500">-Cruise</a></li>
+              <li><a href="#" class="hover:text-blue-500">-Blog</a></li>
+              <li><a href="#" class="hover:text-blue-500">-404</a></li>
+              <li><a href="#" class="hover:text-blue-500">-Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Instagram Section -->
+          <div>
+            <h3 class="text-xl font-bold mb-2">Instagram</h3>
+            <hr class="border-t-2 border-white w-12 mb-4" />
+            <div class="w-full">
+              <img
+                src="List.webp"
+                alt="Instagram Section"
+                class="w-full h-auto object-cover rounded-md"
+              />
+            </div>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div>
+            <h3 class="text-xl font-bold mb-2">Newsletter</h3>
+            <hr class="border-t-2 border-white w-12 mb-4" />
+            <p class="text-sm mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <form class="items-center">
+              <input
+                type="email"
+                placeholder="Email Id"
+                class="flex-grow px-4 py-2 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                class="ml-4 mt-3 px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"
+              >
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div
+          class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400"
+        >
+          © Website - 2022 | All Rights Reserved. Designed By Website
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
