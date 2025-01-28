@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toor Website</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="font-sans bg-white m-0 p-0 overflow-x-hidden">
+    <!-- Top Navbar -->
+    <div class="bg-sky-500 text-white py-2 relative transition-colors duration-300">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <!-- Social Links -->
+          <div class="flex space-x-4">
+              <a href="#" class="hover:text-gray-300">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="hover:text-gray-300">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="hover:text-gray-300">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="hover:text-gray-300">
+                  <i class="fab fa-linkedin-in"></i>
+              </a>
+          </div>
+
+          <!-- Menu Bar Icon -->
+          <div class="md:hidden">
+              <button id="menuToggle" class="hover:text-gray-300" onclick="toggleMenu()">
+                <i class="fas fa-user"></i>
+              </button>
+          </div>
+
+          <!-- Right Links -->
+          <div
+              id="menuLinks"
+              class="hidden flex-col space-y-2 text-sm mt-2 bg-white text-blue-500 rounded-md shadow-lg p-4 md:flex md:flex-row md:space-x-4 md:space-y-0 md:mt-0 md:bg-transparent md:text-white md:shadow-none md:p-0"
+          >
+              <a href="..\page3\index.html" class="hover:text-blue-700">Login</a>
+              <a href="..\page4\index.html" class="hover:text-blue-700">Signup</a>
+              <a href="..\page5\index.html" class="hover:text-blue-700">USD</a>
+          </div>
+      </div>
+  </div>
+
+    <!-- Main Navbar -->
+    <div class="bg-gray-800 absolute left-0 w-full z-50">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4"
+      >
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-white">
+          <img
+            src="./images/logo.png"
+            alt="Logo"
+            class="h-8 w-auto text-white"
+          />
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-6">
+          <!-- Home -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Home
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Submenu 1</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Submenu 2</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Submenu 3</a
+              >
+            </div>
+          </div>
+
+          <!-- Hotels -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Hotels
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Hotels List</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Popular Destinations</a
+              >
+            </div>
+          </div>
+
+          <!-- Flights -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Flights
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Flight Search</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Booking Status</a
+              >
+            </div>
+          </div>
+
+          <!-- Cruise -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Cruise
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Cruise Packages</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Luxury Cruises</a
+              >
+            </div>
+          </div>
+
+          <!-- Cars -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Cars
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Car Rentals</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Self-Drive Options</a
+              >
+            </div>
+          </div>
+
+          <!-- Blog -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Blog
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Latest Articles</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Travel Guides</a
+              >
+            </div>
+          </div>
+
+          <!-- Pages -->
+          <div class="relative group">
+            <a
+              href="#"
+              class="hover:text-blue-300 text-white flex items-center"
+            >
+              Pages
+              <i class="fas fa-chevron-down ml-2 text-xs"></i>
+            </a>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >About Us</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >FAQ</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-visible">
+      <section class="mt-32 flex flex-col md:flex-row max-w-6xl w-full bg-white rounded-lg overflow-hidden mx-auto">
+          <!-- Carousel Section -->
+          <div class="carousel relative w-full md:w-1/3">
+              <img src="./images/page3.jpeg" alt="Image 1" class="absolute inset-0 bg-sky-500 opacity-50 transition-opacity duration-500 ease-in-out" />
+              <img src="./images/page3.jpeg" alt="Image 2" class="absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out" />
+              <img src="./images/page3.jpeg" alt="Image 3" class="absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out" />
+              <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex">
+                  <span class="h-2 w-2 bg-white rounded-full mx-1 cursor-pointer" onclick="showSlide(0)"></span>
+                  <span class="h-2 w-2 bg-white rounded-full mx-1 cursor-pointer" onclick="showSlide(1)"></span>
+                  <span class="h-2 w-2 bg-white rounded-full mx-1 cursor-pointer" onclick="showSlide(2)"></span>
+              </div>
+          </div>
+  
+          <!-- Sign In Form -->
+          <div class="flex flex-col justify-center w-full md:w-2/3 p-4 md:p-8">
+              <h2 class="text-2xl font-bold mb-6">Log in</h2>
+              <form>
+                  <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                      <input type="email" id="email" placeholder="Email address" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" />
+                  </div>
+                  <div class="mb-4">
+                      <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                      <div class="relative">
+                          <input type="password" id="password" placeholder="Enter password" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" />
+                          <i class="fas fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"></i>
+                      </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                      <input type="checkbox" id="remember" class="mr-2" />
+                      <label for="remember" class="text-sm">Keep me signed in</label>
+                      <a href="#" class="ml-auto text-sm text-sky-500">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="bg-sky-500 text-white py-2 rounded w-full">Continue with email</button>
+                  <p class="text-sm text-center mt-4">Don’t have an account? <a href="#" class="text-sky-500">Register</a></p>
+                  <hr class="my-4" />
+                  <p class="text-sm text-center">Or Sign up with</p>
+                  <div class="flex justify-center mt-4">
+                      <a href="#" class="mx-2">
+                          <i class="fab fa-facebook-f text-sky-500"></i>
+                      </a>
+                      <a href="#" class="mx-2">
+                          <i class="fab fa-google text-red-600"></i>
+                      </a>
+                  </div>
+              </form>
+          </div>
+      </section>
+<!-- footer -->
+<footer class="bg-gray-800 mt-20 text-white py-10 px-20 w-full">
+  <div class="w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- About Us Section -->
+    <div>
+      <h3 class="text-xl font-bold mb-2">About Us</h3>
+      <hr class="border-t-2 border-white w-12 mb-4" />
+      <p class="text-sm mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt.
+      </p>
+      <p class="text-sm mb-4">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry...
+      </p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-white hover:text-blue-500"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="#" class="text-white hover:text-blue-500"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="#" class="text-white hover:text-blue-500"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="#" class="text-white hover:text-blue-500"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div>
+      <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+      <hr class="border-t-2 border-white w-12 mb-4" />
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-blue-500">-Home</a></li>
+        <li><a href="#" class="hover:text-blue-500">-Hotels</a></li>
+        <li><a href="#" class="hover:text-blue-500">-Flights</a></li>
+        <li><a href="#" class="hover:text-blue-500">-Cruise</a></li>
+        <li><a href="#" class="hover:text-blue-500">-Blog</a></li>
+        <li><a href="#" class="hover:text-blue-500">-404</a></li>
+        <li><a href="#" class="hover:text-blue-500">-Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Instagram Section -->
+    <div>
+      <h3 class="text-xl font-bold mb-2">Instagram</h3>
+      <hr class="border-t-2 border-white w-12 mb-4" />
+      <div class="w-full">
+        <img
+          src="./images/List.webp"
+          alt="Instagram Section"
+          class="w-full h-auto object-cover rounded-md"
+        />
+      </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div>
+      <h3 class="text-xl font-bold mb-2">Newsletter</h3>
+      <hr class="border-t-2 border-white w-12 mb-4" />
+      <p class="text-sm mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt.
+      </p>
+      <form class="items-center">
+        <input
+          type="email"
+          placeholder="Email Id"
+          class="flex-grow px-4 py-2 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          class="ml-4 mt-3 px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"
+        >
+          SUBSCRIBE
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div
+    class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400"
+  >
+    © Website - 2022 | All Rights Reserved. Designed By Website
+  </div>
+</footer>
+
+
+
+
+
+<!-- footer end -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel img");
+      const dots = document.querySelectorAll(".carousel span");
+
+      function showSlide(index) {
+        slides[currentSlide].style.opacity = "0"; // Fade out current slide
+        dots[currentSlide].classList.remove("bg-blue-500"); // Reset current dot
+
+        // Fade in next slide
+        slides[index].style.opacity = "1";
+        dots[index].classList.add("bg-blue-500"); // Highlight current dot
+
+        currentSlide = index;
+      }
+
+      // Initialize the carousel
+      showSlide(currentSlide);
+
+      // Automatic slide show
+      setInterval(() => {
+        let nextSlide = (currentSlide + 1) % slides.length; // Loop to first slide
+        showSlide(nextSlide);
+      }, 5000); // Change slide every 5 seconds
+
+      // Add event listeners to dots for manual control
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => showSlide(index));
+      });
+
+
+      <!-- togggle menu -->
+      function toggleMenu() {
+        const menuLinks = document.getElementById('menuLinks');
+        const menuIcon = document.getElementById('menuIcon');
+
+        // Toggle the visibility of the menu links
+        if (menuLinks.classList.contains('hidden')) {
+            menuLinks.classList.remove('hidden');
+            menuIcon.classList.remove('fas', 'fa-bars');
+            menuIcon.classList.add('fas', 'fa-times'); // Change to "X" icon
+        } else {
+            menuLinks.classList.add('hidden');
+            menuIcon.classList.remove('fas', 'fa-times');
+            menuIcon.classList.add('fas', 'fa-bars'); // Change back to menu icon
+        }
+    }
+    </script>
+
+    <style>
+      /* Custom styles for the carousel */
+      .carousel {
+        position: relative;
+        height: 400px; 
+        overflow: hidden;
+      }
+      .carousel img {
+       
+        width: 350px; 
+        height: 100%; 
+        margin: 0 auto; 
+        object-fit: cover; 
+        border-radius: 20px;
+      }
+      .carousel span {
+        height: 8px;
+        width: 8px;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.7; 
+        transition: opacity 0.3s;
+      }
+      .carousel span.bg-blue-500 {
+        opacity: 1;
+      }
+      @media (max-width: 425px) {
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media (min-width: 426px) and (max-width: 768px) {
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    </style>
+  </body>
+</html>
