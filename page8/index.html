@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="path-to-fontawesome/css/all.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="font-sans overflow-x-hidden">
+    <!-- Navbar -->
+
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between"
+      >
+        <!-- Logo Section -->
+        <div class="flex items-center justify-between w-full md:w-auto">
+          <img src="./images/logo.png" alt="Logo" class="h-8 w-auto" />
+          <button
+            id="menu-toggle"
+            class="text-gray-600 md:hidden focus:outline-none focus:ring-2 focus:ring-sky-500"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div
+          id="menu"
+          class="hidden w-full mt-4 md:mt-0 md:w-auto md:flex md:items-center md:space-x-6"
+        >
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-plane text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Flight</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-bed text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Stays</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-ship text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Cruise</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-car text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Cars</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+        </div>
+
+        <!-- User Section -->
+        <div class="hidden md:flex items-center space-x-4 sm:hidden">
+          <a href="#" class="text-sm font-medium hover:text-sky-500"
+            ><i class="fas fa-heart text-black text-xs"></i> Favorites</a
+          >
+          <span class="h-6 w-px bg-gray-300"></span>
+          <div class="flex items-center">
+            <img
+              src="./images/Ellipse 1.png"
+              alt="Profile"
+              class="h-8 w-8 rounded-full"
+            />
+            <span class="ml-2 text-sm font-medium"
+              >Login or
+              <p>Create Account</p></span
+            >
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- Mobile Menu -->
+      <div
+        class="fixed bottom-0 left-0 w-full bg-sky-400 text-white md:hidden flex justify-around items-center py-2 z-20 shadow-md"
+      >
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-home text-lg"></i>
+          <span class="text-xs">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-bed text-lg"></i>
+          <span class="text-xs">Hotels</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-plane text-lg"></i>
+          <span class="text-xs">Flights</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-ship text-lg"></i>
+          <span class="text-xs">Cruise</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fa-solid fa-car text-lg"></i>
+          <span class="text-xs">Cars</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- main sectio  -->
+    <div class="bg-gray-50 min-h-screen p-6 justify-center">
+      <!-- Top Section -->
+      <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Background Image -->
+        <div class="h-72 w-full">
+          <img
+            src="./images/page8.jpeg"
+            alt="Background Image"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <!-- Profile Picture -->
+        <div class="absolute top-36 left-1/2 transform -translate-x-1/2">
+          <div class="relative">
+            <img
+              src="./images/profile8.jpeg"
+              alt="Profile Picture"
+              class="h-24 w-24 mt-8 rounded-full border-4 border-white"
+            />
+            <div class="absolute bottom-0 right-0 bg-blue-500 p-1 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15.232 5.232l3.536 3.536M9 13h3m0 0h3m-3 0v3m0-3v-3m2.12-2.12A3.001 3.001 0 0012 9.88a3.001 3.001 0 00-2.121-.879M3 21h18M3 21a9 9 0 009-9M3 21L21 3"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Name and Email -->
+      <div class="text-center mt-8">
+        <h2 class="text-xl font-bold">Lorem Ipsum</h2>
+        <p class="text-gray-500">LoremIpsum@gmail.com</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex justify-start mt-8 border-b">
+        <button
+          class="px-6 py-2 text-gray-500 hover:text-blue-500 hover:border-blue-500 hover:-b-2 hover:border-blue-500"
+        >
+          Account
+        </button>
+        <a href="..\page9\index.html">
+          <button
+            class="px-6 py-2 text-gray-500 hover:text-blue-500 hover:border-blue-500"
+          >
+            Booking History
+          </button></a
+        >
+      </div>
+
+      <!-- Profile Section -->
+      <div class="bg-white shadow-lg rounded-lg mt-6 p-6">
+        <!-- Profile Header -->
+        <div class="flex justify-between items-center">
+          <h3 class="text-3xl font-bold">Profile</h3>
+          <button class="flex items-center text-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15.232 5.232l3.536 3.536M9 13h3m0 0h3m-3 0v3m0-3v-3m2.12-2.12A3.001 3.001 0 0012 9.88a3.001 3.001 0 00-2.121-.879M3 21h18M3 21a9 9 0 009-9M3 21L21 3"
+              />
+            </svg>
+            <span class="ml-2">Edit Profile</span>
+          </button>
+        </div>
+        <p class="text-gray-500 mt-2">
+          Basic info, for a faster booking experience
+        </p>
+        <hr class="my-4" />
+        <!-- Profile Fields -->
+        <div>
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Name</p>
+            <p class="text-gray-500">Lorem Ipsum</p>
+          </div>
+          <hr />
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Email</p>
+            <p class="text-gray-500">LoremIpsum@gmail.com</p>
+          </div>
+          <hr />
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Phone Number</p>
+            <p class="text-gray-500">+91 8877544866</p>
+          </div>
+          <hr />
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Address</p>
+            <p class="text-gray-500">Lorem Ipsum, Dummy Text</p>
+          </div>
+          <hr />
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Date of Birth</p>
+            <p class="text-gray-500">01-01-1992</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Details -->
+      <div class="bg-white shadow-lg rounded-lg mt-6 p-6">
+        <h3 class="text-3xl font-bold">Login Details</h3>
+        <p class="text-gray-500 mt-2">
+          Manage your email address, mobile number, and password
+        </p>
+        <hr class="my-4" />
+        <!-- Login Fields -->
+        <div>
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Mobile Number</p>
+            <p class="text-gray-500">7788544211</p>
+          </div>
+          <hr />
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Email ID</p>
+            <p class="text-gray-500">LoremIpsum@gmail.com</p>
+          </div>
+          <hr />
+          <div class="flex justify-between py-2">
+            <p class="text-gray-700">Password</p>
+            <p class="text-gray-500">••••••••••</p>
+          </div>
+        </div>
+        <div class="flex justify-end mt-4">
+          <button class="text-blue-500">Change Password</button>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="bg-gray-800 mt-10 text-white py-10 px-20 w-full">
+      <div class="w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About Us Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">About Us</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <p class="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <p class="text-sm mb-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry...
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-500">-Home</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Hotels</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Flights</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Cruise</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Blog</a></li>
+            <li><a href="#" class="hover:text-blue-500">-404</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Instagram Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Instagram</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <div class="w-full">
+            <img
+              src="./images/List.webp"
+              alt="Instagram Section"
+              class="w-full h-auto object-cover rounded-md"
+            />
+          </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Newsletter</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <p class="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <form class="items-center">
+            <input
+              type="email"
+              placeholder="Email Id"
+              class="flex-grow px-4 py-2 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              class="ml-4 mt-3 px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"
+            >
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div
+        class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400"
+      >
+        © Website - 2022 | All Rights Reserved. Designed By Website
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

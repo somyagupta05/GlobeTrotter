@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="path-to-fontawesome/css/all.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="font-sans overflow-x-hidden">
+    <!-- Navbar -->
+
+    <nav class="bg-white shadow-xl border border-2">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <!-- Logo Section -->
+        <div class="flex items-center justify-between w-full md:w-auto">
+          <img src="./images/logo.png" alt="Logo" class="h-8 w-auto" />
+          <button
+            id="menu-toggle"
+            class="text-gray-600 md:hidden focus:outline-none focus:ring-2 focus:ring-sky-500"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div
+          id="menu"
+          class="hidden w-full mt-4 md:mt-0 md:w-auto md:flex md:items-center md:space-x-6"
+        >
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-plane text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Flight</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-bed text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Stays</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-ship text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Cruise</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-car text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Cars</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+        </div>
+
+        <!-- User Section -->
+        <div class="hidden md:flex items-center space-x-4 sm:hidden">
+          <a href="#" class="text-sm font-medium hover:text-sky-500">
+            <i class="fas fa-heart text-black text-xs"></i> Favorites
+          </a>
+          <span class="h-6 w-px bg-gray-300"></span>
+          <div class="flex items-center">
+            <img
+              src="./images/Ellipse 1.png"
+              alt="Profile"
+              class="h-8 w-8 rounded-full"
+            />
+            <span class="ml-2 text-sm font-medium">John D.</span>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="fixed bottom-0 left-0 w-full bg-sky-400 text-white md:hidden flex justify-around items-center py-2 z-20 shadow-md"
+      >
+        <a href="#" class="flex flex-col items-center hover:text-sky-300">
+          <i class="fas fa-home text-lg"></i>
+          <span class="text-xs">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-sky-300">
+          <i class="fas fa-bed text-lg"></i>
+          <span class="text-xs">Hotels</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-sky-300">
+          <i class="fas fa-plane text-lg"></i>
+          <span class="text-xs">Flights</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-sky-300">
+          <i class="fas fa-ship text-lg"></i>
+          <span class="text-xs">Cruise</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-sky-300">
+          <i class="fa-solid fa-car text-lg"></i>
+          <span class="text-xs">Cars</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container mx-auto mt-10 p-4">
+      <!-- Header Section -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mb-4 p-4"
+      >
+        <div class="mb-4 md:mb-0">
+          <h1 class="text-xl md:text-2xl font-bold">
+            Whispering Pines Cottages | Treehouse | Tandi
+          </h1>
+          <p class="text-gray-600 text-sm md:text-base">
+            <i class="fas fa-map-marker-alt mr-2"></i>Jibi, Himachal Pradesh,
+            India
+          </p>
+          <div class="flex items-center space-x-4 mt-2">
+            <span
+              class="bg-sky-500 text-white px-2 py-1 rounded-md text-xs flex items-center"
+            >
+              4.2
+            </span>
+            <b class="text-sm md:text-base">Very Good</b>
+            <span class="text-xs md:text-sm text-gray-600">
+              <u>371 reviews</u>
+            </span>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-3xl md:text-4xl font-bold">$140</span>
+          <span class="text-base md:text-xl text-black font-bold">/night</span>
+          <div class="flex space-x-2 mt-2">
+            <div class="flex space-x-2">
+              <button
+                class="flex items-center justify-center border border-sky-500 text-black px-3 py-2 rounded"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+              <button
+                class="flex items-center justify-center border border-sky-500 text-black px-3 py-2 rounded"
+              >
+                <i class="fas fa-share"></i>
+              </button>
+            </div>
+            <a href="../page7/index.html">
+              <button class="bg-sky-500 text-white px-4 py-2 rounded">
+                Book now
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <img
+          src="./images/page61.jpeg"
+          alt="Main Image"
+          class="w-full h-auto rounded-lg"
+        />
+        <div class="grid grid-cols-2 gap-1">
+          <img
+            src="./images/page62.jpeg"
+            alt="Image 1"
+            class="w-full h-64 md:h-96 rounded-lg"
+          />
+          <img
+            src="./images/page63.jpeg"
+            alt="Image 2"
+            class="w-full h-64 md:h-96 rounded-lg"
+          />
+          <img
+            src="./images/page64.jpeg"
+            alt="Image 3"
+            class="w-full h-64 md:h-96 rounded-lg"
+          />
+          <img
+            src="./images/page65.jpeg"
+            alt="Image 4"
+            class="w-full h-64 md:h-96 rounded-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Overview, Rooms, Guest Reviews -->
+      <div class="flex space-x-4 mb-4">
+        <button
+          class="tab-button text-lg font-medium border-b-2 border-transparent"
+          data-section="overview"
+          onclick="showContent('overview')"
+        >
+          Overview
+        </button>
+        <button
+          class="tab-button text-lg font-medium border-b-2 border-transparent"
+          data-section="rooms"
+          onclick="showContent('rooms')"
+        >
+          Rooms
+        </button>
+        <button
+          class="tab-button text-lg font-medium border-b-2 border-transparent"
+          data-section="guest-reviews"
+          onclick="showContent('guest-reviews')"
+        >
+          Guest Reviews
+        </button>
+      </div>
+
+      <hr class="mb-4" />
+
+      <!-- Content Sections -->
+      <div id="overview" class="content-section mb-4 hidden">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+          adipisci nesciunt magni modi quia rerum! Facilis possimus excepturi
+          tenetur explicabo velit hic, sint, quaerat magnam eos voluptatibus
+          autem aut maxime.
+        </p>
+        <br />
+        <p>
+          It has survived not only five centuries, but also the leap into
+          electronic typesetting Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Dolorem ipsa officiis quae?
+        </p>
+        <br />
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+          maiores voluptatibus temporibus. Veritatis, nulla pariatur cumque
+          facilis obcaecati mollitia necessitatibus!
+        </p>
+      </div>
+
+      <div id="rooms" class="content-section mb-4 hidden">
+        <p>
+          Details about the available rooms and their features will be shown
+          here. Each room has its unique features and pricing. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Aliquid mollitia ducimus
+          laudantium.
+        </p>
+        <br />
+        <p>
+          For more information, please contact the reception or check the
+          website for updates. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quasi, molestiae.
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+          consequuntur perferendis error?
+        </p>
+      </div>
+
+      <div id="guest-reviews" class="content-section mb-4 hidden">
+        <p>
+          Guest reviews will be displayed here. See what others have said about
+          their experience staying here. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Dolores provident possimus nisi perferendis!
+        </p>
+        <br />
+        <p>
+          Feedback from guests helps us improve our services. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Recusandae error velit
+          incidunt, libero, saepe cum repellendus quas commodi sapiente ipsam
+          maxime quam harum.
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
+          magni inventore sunt temporibus, deleniti ipsam numquam natus ipsum
+          accusantium asperiores.
+        </p>
+      </div>
+
+      <!-- Business Services and Ratings -->
+      <div class="flex items-center space-x-4 mb-4">
+        <div class="flex items-center space-x-1">
+          <span><i class="fa-solid fa-business-time"></i></span>
+          <span>Business Services</span>
+        </div>
+        <div class="flex items-center space-x-1">
+          <span><i class="fa-regular fa-thumbs-up"></i></span>
+          <span>Top rated in area</span>
+        </div>
+      </div>
+
+      <!-- Amenities Section -->
+      <h2 class="text-xl font-bold mt-8">Amenities</h2>
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-wifi"></i> Free wifi</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-fan"></i> Air Conditioning</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-water-ladder"></i> Indoor pool</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-dumbbell"></i> Fitness center</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-utensils"></i> Restaurant</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-utensils"></i> Bar/Lounge</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-bell-concierge"></i> Room service</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-car"></i> Parking available</span>
+        </div>
+        <div class="flex items-center">
+          <span><i class="fa-solid fa-mug-saucer"></i> Tea/coffee machine</span>
+        </div>
+        <div class="mt-2 text-gray-500">+24 more</div>
+      </div>
+    </div>
+    <!-- review section -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-start mt-20 mx-4 md:mx-32"
+    >
+      <div class="w-full md:w-2/3">
+        <h2 class="text-2xl font-bold text-gray-800">User Ratings & Reviews</h2>
+        <div class="flex items-center mt-4 hidden md:block">
+          <img src="./images/frame6.png" class="h-auto w-full" />
+        </div>
+
+        <div class="mt-4 space-y-4">
+          <!-- Review 1 -->
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center">
+                <img
+                  src="./images/6profile.jpeg"
+                  alt="Profile Pic"
+                  class="rounded-full h-16 w-16 mr-2"
+                />
+                <span class="font-bold mr-2">5.0 Amazing</span>
+                <div class="border-l border-gray-300 h-6 mx-2"></div>
+                <span class="text-gray-700">Lorem ipsum</span>
+              </div>
+              <span class="text-gray-500">🏳️</span>
+            </div>
+            <p class="text-gray-700 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Iste a
+              blanditiis soluta eaque ratione laudantium quos deserunt tempora
+              doloribus cupiditate, aperiam consectetur officiis aliquam quis
+              accusamus assumenda optio similique veniam!
+            </p>
+            <!-- <hr class="my-2 border-gray-300" /> -->
+          </div>
+
+          <!-- Repeat for other reviews -->
+          <!-- Review 2 -->
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center">
+                <img
+                  src="./images/6profile.jpeg"
+                  alt="Profile Pic"
+                  class="rounded-full h-16 w-16 mr-2"
+                />
+                <span class="font-bold mr-2">5.0 Amazing</span>
+                <div class="border-l border-gray-300 h-6 mx-2"></div>
+                <span class="text-gray-700">Lorem ipsum</span>
+              </div>
+              <span class="text-gray-500">🏳️</span>
+            </div>
+            <p class="text-gray-700 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Iste a
+              blanditiis soluta eaque ratione laudantium quos deserunt tempora
+              doloribus cupiditate, aperiam consectetur officiis aliquam quis
+              accusamus assumenda optio similique veniam!
+            </p>
+            <!-- <hr class="my-2 border-gray-300" /> -->
+          </div>
+          <!-- review 3 -->
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center">
+                <img
+                  src="./images/6profile.jpeg"
+                  alt="Profile Pic"
+                  class="rounded-full h-16 w-16 mr-2"
+                />
+                <span class="font-bold mr-2">5.0 Amazing</span>
+                <div class="border-l border-gray-300 h-6 mx-2"></div>
+                <span class="text-gray-700">Lorem ipsum</span>
+              </div>
+              <span class="text-gray-500">🏳️</span>
+            </div>
+            <p class="text-gray-700 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Iste a
+              blanditiis soluta eaque ratione laudantium quos deserunt tempora
+              doloribus cupiditate, aperiam consectetur officiis aliquam quis
+              accusamus assumenda optio similique veniam!
+            </p>
+            <!-- <hr class="my-2 border-gray-300" /> -->
+          </div>
+          <!-- review 4 -->
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center">
+                <img
+                  src="./images/6profile.jpeg"
+                  alt="Profile Pic"
+                  class="rounded-full h-16 w-16 mr-2"
+                />
+                <span class="font-bold mr-2">5.0 Amazing</span>
+                <div class="border-l border-gray-300 h-6 mx-2"></div>
+                <span class="text-gray-700">Lorem ipsum</span>
+              </div>
+              <span class="text-gray-500">🏳️</span>
+            </div>
+            <p class="text-gray-700 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Iste a
+              blanditiis soluta eaque ratione laudantium quos deserunt tempora
+              doloribus cupiditate, aperiam consectetur officiis aliquam quis
+              accusamus assumenda optio similique veniam!
+            </p>
+            <!-- <hr class="my-2 border-gray-300" /> -->
+          </div>
+          <!-- review 5 -->
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex justify-between items-start">
+              <div class="flex items-center">
+                <img
+                  src="./images/6profile.jpeg"
+                  alt="Profile Pic"
+                  class="rounded-full h-16 w-16 mr-2"
+                />
+                <span class="font-bold mr-2">5.0 Amazing</span>
+                <div class="border-l border-gray-300 h-6 mx-2"></div>
+                <span class="text-gray-700">Lorem ipsum</span>
+              </div>
+              <span class="text-gray-500">🏳️</span>
+            </div>
+            <p class="text-gray-700 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Iste a
+              blanditiis soluta eaque ratione laudantium quos deserunt tempora
+              doloribus cupiditate, aperiam consectetur officiis aliquam quis
+              accusamus assumenda optio similique veniam!
+            </p>
+            <!-- <hr class="my-2 border-gray-300" /> -->
+          </div>
+          <!-- More reviews can be added here... -->
+        </div>
+
+        <div class="flex justify-center items-center mt-4">
+          <button class="text-sky-500">&lt;</button>
+          <span class="text-gray-600">1 of 40</span>
+          <button class="text-sky-500">&gt;</button>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-4 md:mt-0">
+        <button class="bg-sky-500 text-white px-4 py-2 rounded">
+          Give your review
+        </button>
+      </div>
+    </div>
+
+    <h2 class="mt-8 text-2xl font-bold ml-4 md:ml-32">Location/Map</h2>
+    <div class="mt-4 flex justify-center">
+      <img
+        src="./images/map6.png"
+        alt="Location Map"
+        class="w-full h-96 mx-4 md:mx-32 rounded shadow-md"
+      />
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 mt-20 text-white py-10 px-20 w-full">
+      <div class="w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About Us Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">About Us</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <p class="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <p class="text-sm mb-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry...
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-500">-Home</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Hotels</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Flights</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Cruise</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Blog</a></li>
+            <li><a href="#" class="hover:text-blue-500">-404</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Instagram Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Instagram</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <div class="w-full">
+            <img
+              src="./images/List.webp"
+              alt="Instagram Section"
+              class="w-full h-auto object-cover rounded-md"
+            />
+          </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Newsletter</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <p class="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <form class="items-center">
+            <input
+              type="email"
+              placeholder="Email Id"
+              class="flex-grow px-4 py-2 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              class="ml-4 mt-3 px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"
+            >
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div
+        class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400"
+      >
+        © Website - 2022 | All Rights Reserved. Designed By Website
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

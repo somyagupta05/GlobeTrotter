@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="path-to-fontawesome/css/all.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="font-sans overflow-x-hidden">
+    <!-- Navbar -->
+
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between"
+      >
+        <!-- Logo Section -->
+        <div class="flex items-center justify-between w-full md:w-auto">
+          <img src="./images/logo.png" alt="Logo" class="h-8 w-auto" />
+          <button
+            id="menu-toggle"
+            class="text-gray-600 md:hidden focus:outline-none focus:ring-2 focus:ring-sky-500"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div
+          id="menu"
+          class="hidden w-full mt-4 md:mt-0 md:w-auto md:flex md:items-center md:space-x-6"
+        >
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-plane text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Flight</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-bed text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Stays</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-ship text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Cruise</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+          <a
+            href="#"
+            class="text-sm font-medium flex items-center space-x-2 relative"
+          >
+            <i
+              class="fas fa-car text-black text-2xl transition-colors duration-200"
+            ></i>
+            <span class="text-black">Find Cars</span>
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[2px] bg-sky-500"
+            ></span>
+          </a>
+        </div>
+
+        <!-- User Section -->
+        <div class="hidden md:flex items-center space-x-4 sm:hidden">
+          <a href="#" class="text-sm font-medium hover:text-sky-500"
+            ><i class="fas fa-heart text-black text-xs"></i> Favorites</a
+          >
+          <span class="h-6 w-px bg-gray-300"></span>
+          <div class="flex items-center">
+            <img
+              src="./images/Ellipse 1.png"
+              alt="Profile"
+              class="h-8 w-8 rounded-full"
+            />
+            <a href="../page8/index.html">
+              <span class="ml-2 text-sm font-medium"
+                >Login or
+                <p>Create Account</p></span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- Mobile Menu -->
+      <div
+        class="fixed bottom-0 left-0 w-full bg-sky-400 text-white md:hidden flex justify-around items-center py-2 z-20 shadow-md"
+      >
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-home text-lg"></i>
+          <span class="text-xs">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-bed text-lg"></i>
+          <span class="text-xs">Hotels</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-plane text-lg"></i>
+          <span class="text-xs">Flights</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fas fa-ship text-lg"></i>
+          <span class="text-xs">Cruise</span>
+        </a>
+        <a href="#" class="flex flex-col items-center hover:text-blue-300">
+          <i class="fa-solid fa-car text-lg"></i>
+          <span class="text-xs">Cars</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- main section -->
+    <div class="flex flex-col gap-6 p-4 md:flex-row md:gap-8 bg-white">
+      <!-- Left Section -->
+      <div class="w-full md:w-2/3 bg-white shadow rounded-lg p-6">
+        <!-- Hotel Details -->
+        <div class="flex flex-col md:flex-row items-start gap-4 border-b pb-4">
+          <img
+            src="./images/page7.jpeg"
+            alt="Hotel Image"
+            class="w-full md:w-24 h-24 rounded object-cover"
+          />
+          <div class="flex-1">
+            <h2 class="text-lg font-bold mt-4 md:mt-0">
+              Whispering Pines Cottages | Treehouse | Tandi
+            </h2>
+            <p class="text-gray-500 text-sm md:text-base">
+              237, Virbhadra Road, Jaipur, Rajasthan, India
+            </p>
+          </div>
+        </div>
+
+        <!-- Booking Info -->
+        <div class="mt-4 border-b pb-4 bg-gray-200">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div>
+              <p class="font-bold text-sm md:text-base">CHECK IN</p>
+              <p class="text-sm md:text-base">Fri 18 Aug 2023</p>
+            </div>
+            <div>
+              <p class="font-bold text-sm md:text-base">CHECK OUT</p>
+              <p class="text-sm md:text-base">Sun 20 Aug 2023</p>
+            </div>
+            <div>
+              <p class="font-bold text-sm md:text-base">
+                2 <span class="text-gray-600">Nights |</span> 9
+                <span class="text-gray-600"> Adults</span><br />4
+                <span class="text-gray-600"> Children |</span> 3
+                <span class="text-gray-600"> Rooms</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 border-b pb-4">
+          <!-- Room Selection -->
+          <div
+            class="flex flex-col md:flex-row items-start justify-between gap-4"
+          >
+            <p class="font-bold mb-2 text-sm md:text-base">
+              Family Room - Partial River <br />view<br />
+              <span class="text-gray-500">3 Adults, 1 Children</span>
+            </p>
+            <ul
+              class="text-gray-500 list-disc list-inside flex flex-col gap-2 text-sm"
+            >
+              <li>Room with Breakfast + Dinner</li>
+              <li>Free Welcome Drink on Arrival</li>
+              <li>Free Breakfast</li>
+            </ul>
+            <p
+              class="text-blue-500 font-bold self-center ml-0 md:ml-8 text-sm md:text-base"
+            >
+              Selected
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Room -->
+        <div class="mt-4 border-b pb-4">
+          <div
+            class="flex flex-col md:flex-row items-start justify-between gap-4"
+          >
+            <p class="font-bold mb-2 text-sm md:text-base">
+              Deluxe Room - Partial Pool <br />view<br />
+              <span class="text-gray-500">3 Adults, 1 Children</span>
+            </p>
+            <ul
+              class="text-gray-500 list-disc list-inside flex flex-col gap-2 text-sm"
+            >
+              <li>Room with Breakfast + Dinner</li>
+              <li>Free Welcome Drink on Arrival</li>
+              <li>Free Breakfast</li>
+            </ul>
+            <p
+              class="text-blue-500 font-bold self-center ml-0 md:ml-8 text-sm md:text-base"
+            >
+              Selected
+            </p>
+          </div>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="mt-4">
+          <!-- First Payment Option -->
+          <div class="border-b pb-4">
+            <p class="font-bold text-sm md:text-base">Pay in full</p>
+            <div
+              class="flex flex-col md:flex-row items-center justify-between gap-2 mt-2"
+            >
+              <p class="text-black text-sm md:text-base">
+                Pay the total and you are all set
+              </p>
+              <input type="radio" name="payment" class="w-5 h-5" />
+            </div>
+          </div>
+
+          <!-- Second Payment Option -->
+          <div class="pt-4">
+            <p class="font-bold text-sm md:text-base">
+              Pay part now, part later
+            </p>
+            <div
+              class="flex flex-col md:flex-row items-center justify-between gap-2 mt-2"
+            >
+              <p class="text-black text-sm md:text-base">
+                Pay ₹10,200 now, and the rest (₹70,000) will be automatically<br />
+                charged to the same payment method on Jul 27, 2023. No extra
+                fees.
+              </p>
+              <input type="radio" name="payment" class="w-5 h-5" />
+            </div>
+            <p class="text-gray-500 mt-2 text-sm md:text-base">More info</p>
+          </div>
+        </div>
+        <hr />
+        <!-- Guest Details and Login Section -->
+        <div class="mt-6 rounded shadow-lg p-4">
+          <h3 class="font-bold text-lg mb-4">Guest Details</h3>
+          <form>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <!-- Title -->
+              <div>
+                <label class="block text-gray-500 text-sm">TITLE</label>
+                <select class="w-full border-gray-300 rounded px-3 py-2">
+                  <option>Mr</option>
+                  <option>Ms</option>
+                  <option>Mrs</option>
+                </select>
+              </div>
+              <!-- First Name -->
+              <div class="col-span-1">
+                <label class="block text-gray-500 text-sm">FULL NAME</label>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="w-full bg-gray-200 border-gray-300 rounded px-3 py-2"
+                />
+              </div>
+              <!-- Last Name -->
+              <div>
+                <label class="block text-gray-500 text-sm">LAST NAME</label>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="w-full bg-gray-200 border-gray-300 rounded px-3 py-2"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <!-- Email Address -->
+              <div>
+                <label class="block text-gray-500 text-sm">EMAIL ADDRESS</label>
+                <input
+                  type="email"
+                  placeholder="Email ID"
+                  class="w-full bg-gray-200 border-gray-300 rounded px-3 py-2"
+                />
+              </div>
+              <!-- Mobile Number -->
+              <div>
+                <label class="block text-gray-500 text-sm">MOBILE NUMBER</label>
+                <div class="flex">
+                  <select class="border-gray-300 rounded-l px-3 py-2">
+                    <option>+91</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Contact Number"
+                    class="w-full bg-gray-200 border-gray-300 rounded-r px-3 py-2"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Checkbox for GST -->
+            <div class="mt-4">
+              <input type="checkbox" class="mr-2" />
+              Enter GST Details (Optional)
+            </div>
+
+            <!-- Add Guest Button -->
+            <button type="button" class="mt-4 text-blue-500 font-bold">
+              + Add Guest
+            </button>
+          </form>
+
+          <!-- Login Form Section -->
+          <h2 class="text-2xl font-bold mb-6 mt-6">Login or Sign up to book</h2>
+          <form>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                class="mt-1 block w-full border border-gray-300 p-2 rounded-md"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-700"
+                >Password</label
+              >
+              <div class="relative">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter password"
+                  class="mt-1 block w-full border border-gray-300 p-2 rounded-md"
+                />
+                <i
+                  class="fas fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                ></i>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <input type="checkbox" id="remember" class="mr-2" />
+              <label for="remember" class="text-sm">Keep me signed in</label>
+              <a href="#" class="ml-auto text-sm text-sky-500"
+                >Forgot password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="bg-sky-500 text-white py-2 rounded w-full"
+            >
+              Continue with email
+            </button>
+            <p class="text-sm text-center mt-4">
+              Don’t have an account?
+              <a href="#" class="text-sky-500">Register</a>
+            </p>
+            <hr class="my-4" />
+            <p class="text-sm text-center">Or Sign up with</p>
+            <div class="flex justify-center mt-4">
+              <a href="#" class="mx-2">
+                <i class="fab fa-facebook-f text-sky-500"></i>
+              </a>
+              <a href="#" class="mx-2">
+                <i class="fab fa-google text-red-600"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- form -->
+
+      <!-- Right Section -->
+      <div class="w-full md:w-1/3 h-1/2 bg-white shadow rounded-lg p-6">
+        <h3 class="font-bold text-lg border-b pb-4">Price Breakup</h3>
+        <div class="mt-4">
+          <div class="flex justify-between">
+            <p class="font-bold">
+              3 Rooms x 2 Nights<br /><span class="text-gray-500"
+                >Base Price</span
+              >
+            </p>
+            <p>₹95,200</p>
+          </div>
+          <hr class="my-2" />
+          <div class="flex justify-between">
+            <p class="text-sky-500 font-bold">Total Discount</p>
+            <p class="text-green-500">-₹15,708</p>
+          </div>
+          <hr class="my-2" />
+          <div class="flex justify-between">
+            <p class="font-bold">Price after Discount</p>
+            <p>₹70,200</p>
+          </div>
+          <hr class="my-2" />
+          <div class="flex justify-between">
+            <p class="font-bold">Hotel Taxes</p>
+            <p>₹17,136</p>
+          </div>
+          <hr class="my-2" />
+          <div class="flex justify-between font-bold">
+            <p class="font-bold">Total Amount to be paid</p>
+            <p>₹96,633</p>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center">
+          <input
+            type="text"
+            placeholder="Have a Coupon Code"
+            class="w-full border-gray-300 rounded px-3 py-2 mr-2"
+          />
+          <button class="bg-blue-500 text-white px-6 py-2 rounded">
+            &#8594;
+          </button>
+        </div>
+      </div>
+
+      <!-- form -->
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 mt-10 text-white py-10 px-20 w-full">
+      <div class="w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About Us Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">About Us</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <p class="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <p class="text-sm mb-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry...
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-500"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-500">-Home</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Hotels</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Flights</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Cruise</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Blog</a></li>
+            <li><a href="#" class="hover:text-blue-500">-404</a></li>
+            <li><a href="#" class="hover:text-blue-500">-Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Instagram Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Instagram</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <div class="w-full">
+            <img
+              src="./images/List.webp"
+              alt="Instagram Section"
+              class="w-full h-auto object-cover rounded-md"
+            />
+          </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Newsletter</h3>
+          <hr class="border-t-2 border-white w-12 mb-4" />
+          <p class="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <form class="items-center">
+            <input
+              type="email"
+              placeholder="Email Id"
+              class="flex-grow px-4 py-2 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              class="ml-4 mt-3 px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"
+            >
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div
+        class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400"
+      >
+        © Website - 2022 | All Rights Reserved. Designed By Website
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
